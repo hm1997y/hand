@@ -73,7 +73,7 @@
 </view>
 <view class='footer-el'>
 <image class="footer-img" src='images/自助服务.png'></image>
-<view class="footer-title">全部问题</view>
+<view class="footer-title">自助服务</view>
 </view>
 </view>
 </view>
