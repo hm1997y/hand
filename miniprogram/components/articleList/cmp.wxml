@@ -1,0 +1,8 @@
+
+
+<view>
+<view>
+<h-articleType wx:for="{{articleList}}"  article-item="{{item}}" wx:key="{{index}} + society" />
+</view>
+<h-loading hidden="{{hidden}}" />
+</view>

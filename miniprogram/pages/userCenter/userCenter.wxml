@@ -1,0 +1,84 @@
+<view>
+<!-- 标题栏 -->
+
+<view class="h_title">
+<view>扫一扫</view>
+<view>我</view>
+<view>设置</view>
+</view>
+<!-- 头像区 -->
+<view class="header">
+<view class="headImg top" catchtap="chooseImg">
+<image src="{{user.headImg ? user.headImg : headSrc}}" class="h_img"></image>
+<!-- <image src="{{user.headImg ? user.headSrc:headSrc}}" class="h_img"></image> -->
+<view class="username">{{user.username ? user.username:'您还未登录，请先登录' }}</view>
+</view>
+<view class="headImg bot">
+<view>关注社区</view>
+<view>粉丝</view>
+</view>
+</view>
+
+
+
+
+
+<view class="lifeList">
+<view class="list">
+<image src="../../images/相册.png" class="listImg"></image>
+<text class="listTitle">我的相册</text>
+</view>
+<view class="list" catchtap="myArticle">
+<image src="../../images/我的粉丝.png" class="listImg"></image>
+<text class="listTitle">我的收藏</text>
+</view>
+<view class="list">
+<image src="../../images/关注.png" class="listImg"></image>
+<text class="listTitle">我的关注</text>
+</view>
+<view class="list">
+<image src="../../images/足迹.png" class="listImg"></image>
+<text class="listTitle">我的足迹</text>
+</view>
+
+</view>
+<view class="lifeList">
+<view class="list">
+<image src="../../images/社区动态.png" class="listImg"></image>
+<text class="listTitle">社区动态</text>
+</view>
+<view class="list" bindtap="toService">
+<image src="../../images/客服.png" class="listImg"></image>
+<text class="listTitle">我的客服</text>
+</view>
+<view class="list">
+<image src="../../images/钱包.png" class="listImg"></image>
+<text class="listTitle">我的钱包</text>
+</view>
+<view class="list" bindtap="publish">
+<image src="../../images/me.png" class="listImg"></image>
+<text class="listTitle">我的发表</text>
+</view>
+</view>
+<!-- footer -->
+<view class="footer">
+<view class="ele">
+<image  src="../../images/免流量服务.png" class="free"></image>
+<view class="freeText">免流量</view>
+<image src="../../images/前进.png" class="free righ"></image>
+</view>
+<view class="ele">
+<image  src="../../images/运动.png" class="free"></image>
+<view class="freeText">我的运动</view>
+<image src="../../images/前进.png" class="free righ"></image>
+</view>
+<view class="ele">
+<image  src="../../images/草稿箱.png" class="free"></image>
+<view class="freeText">草稿箱</view>
+<image src="../../images/前进.png" class="free righ"></image>
+</view>
+</view>
+
+
+
+</view>

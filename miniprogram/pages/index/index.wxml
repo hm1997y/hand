@@ -1,0 +1,44 @@
+<view class="wrapper">
+
+<!-- 导航栏 -->
+<scroll-view scroll-x class="nav_bar" scroll-into-view="{{activeId}}" scroll-with-animation >
+<view class="nav">
+<block wx:for="{{scrollTop}}" wx:key="{{index}} + nav">
+<view class="nav_item {{curIndex == index ? 'nav_active' : '' }}" catchtap="onTap" data-index="{{index}}"
+id="{{'page' + index}}" >{{item}}</view>
+</block>
+</view>
+</scroll-view>
+<!-- 内容区 -->
+
+<view class="content" bindtap="getData">
+<button bindtap="tologin" hidden="{{loginStatus}}">未登录</button>
+<!-- 搜索框 -->
+
+<view class="search-view">
+<input placeholder="搜索" class="searchInp" bindinput="inpVal"/>
+<image src="../../images/search.png" class="search-image"  bindtap="searchArticle" ></image>
+</view>
+<view wx:for="{{scrollTop}}" data-typeid="{{index}}" class="" wx:key="type + {{ index}}"
+ hidden="{{curIndex !== index}}">
+<!-- 页面内容渲染组件 -->
+<h-articlelist article-list="{{articleList}}" hidden="{{load}}"/>
+</view>
+
+<!-- 返回顶部 -->
+<view class="goTop" hidden="{{goTop}}" catchtap="backTop">
+<image src="../../images/top.png" class="top-img"></image>
+</view>
+
+
+<!-- <swiper class="content-wrapper" style="height:{{rpxHeight}}rpx" current="{{curIndex}}" duration="0"  data-typeid="{{curIndex}}" bindchange="getData">
+<swiper-item wx:for="{{scrollTop}}" wx:key="{{index + con}}" catchtouchmove="stopSwiper">
+<h-articletype />
+</swiper-item>
+
+</swiper>  -->
+
+ </view>
+ <!-- 提示数据没有了 -->
+<view class="noMore" hidden="{{noMore}}">没有更多数据了哟~~~</view>
+</view>

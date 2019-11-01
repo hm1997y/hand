@@ -1,0 +1,12 @@
+{
+  "component": true,
+  "usingComponents": {
+    "h-head":"/components/headImg/cmp",
+    "h-article":"/components/article/cmp",
+    "h-nineImg":"/components/nineImg/cmp",
+    "h-imgtext": "/components/bigImgAndText/cmp",
+    "h-audio": "/components/audio/cmp",
+    "h-icon": "/components/icon/cmp",
+    "h-video":"/components/video/cmp"
+  }
+}

@@ -1,0 +1,14 @@
+.headImg{
+  display:flex;
+  flex-direction: row;
+}
+.img{
+  width:100rpx;
+  height:100rpx;
+  border-radius: 50%;
+}
+.title{
+  margin-top:40rpx;
+  margin-left:20rpx;
+  font-size:28rpx;
+}

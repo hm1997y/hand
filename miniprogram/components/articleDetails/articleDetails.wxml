@@ -1,0 +1,87 @@
+<!--pages/articleDetails/articleDetails.wxml-->
+<!-- <text>pages/articleDetails/articleDetails.wxml</text> -->
+<!-- <wxs src="../../utils/filter.wxs" module="filter"></wxs>
+<wxs src="../../utils/format.wxs" module="format" ></wxs> -->
+<view class="container">
+  <!-- <view class="title">
+    <text class="head">{{articleDetails.title}}</text>
+  </view> -->
+  <!-- <view class="littletitle">
+    <text decode="true" space="ensp">{{articleDetails.author}}  </text>
+    <text>{{articleDetails.publishTime}}</text>
+  </view> -->
+  <view class="media-container">
+
+
+
+    <!-- <swiper wx:if="{{articleDetails.banner[0]}}" indicator-dots='{{true}}' indicator-color='#fff' autoplay='{{true}}' interval='3000'>
+      <swiper-item wx:for='{{articleDetails.banner}}'>
+        <image src="{{item}}"></image>
+      </swiper-item>
+    </swiper> -->
+    
+
+    <video initial-time="10" class="video" id="myVideo" 
+    enable-progress-gesture='true'
+    enable-danmu='true'
+    danmu-btn='true'
+    duration='30'
+    controls='true'
+    danmu-list='{{danmulist}}'
+    src="">
+    <cover-view class="controls" wx:if="{{videoCover}}">
+    <cover-image src='{{articleDetails.video.poster}}'></cover-image>
+    <cover-view  class="controls-box" bindtap='onVideo'>
+    <cover-image src='/image/icon/icon_play_white.png'></cover-image>
+    <cover-view>{{articleDetails.video.duration}}</cover-view>
+    </cover-view>
+    </cover-view>
+    </video>
+
+  <view class="audio-container" >
+  <view class="audio-controls">
+  <image src="/image/icon/icon_pause.png" wx:if="{{playing}}" bindtap='audiocontrols'></image>
+  <image src="/image/icon/icon_play.png" bindtap='audiocontrols' wx:else></image>
+  </view>
+  <view class="audio-info">
+  <view class="audio-titile">
+  <!-- <text>{{articleDetails.audio.audioTitle}}</text> -->
+  </view>
+  <view class="audio-from">
+  <!-- <text>{{articleDetails.audio.from}}</text> -->
+  </view>
+  <view class="audio-progress" style="width:{{audioWidth + 'rpx'}}" bindtouchstart='audioProgressMove'>
+  <progress percent='{{processPercent}}' stroke-width='3'></progress>
+  <view class="progress-circle" style="left:{{progressCircleLeft + 'rpx'}}" bindtouchmove='audioCircleMove'></view>
+  </view>
+  <view class="audio-time">
+  <!-- <text>{{format(audioCurTime)}}</text>
+  <text>{{format(articleDetails.audio.duration)}}</text> -->
+  </view>
+  </view>
+
+  </view>
+
+  </view>
+  <view class="article">
+    <!-- <text decode="true">{{filter(articleDetails.content)}}</text> -->
+  </view>
+  <view class="last">
+    <text decode="true" space="ensp">阅读  </text>
+    <!-- <text>{{articleDetails.readNum}}</text> -->
+  </view>
+
+</view>
+<!-- <wxs module="filter">
+  
+</wxs> -->
+<!-- <wxs module="format"> -->
+<!-- var format = function(sec){
+var minute = Math.floor(sec / 60);
+var second = sec % 60;
+minute = minute < 10 ? '0' + minute : minute;
+second = second < 10 ? '0' + second : second;
+return minute + ':' + second;
+}
+module.exports = format -->
+<!-- </wxs> -->

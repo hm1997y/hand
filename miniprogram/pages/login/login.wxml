@@ -1,0 +1,18 @@
+<view class="login-wrapper">
+<input placeholder="请输入用户名" bindinput="usernameInp"></input>
+<input placeholder="请输入密码" bindinput="psdInp" type="password"></input>
+<view  hidden="{{!isLogin}}">
+<button type="primary" bindtap="userLogin">登录</button>
+<view class="title">
+<button class="help">需要帮助</button>
+<button bindtap="reg" class="tishi">还没有账户？点击注册</button>
+</view>
+</view>
+<view hidden="{{isLogin}}">
+<input placeholder="请再次输入密码" bindinput="rePws" type="password"></input>
+<input placeholder="请输入电话号码" bindinput="phoneInp" type="phone"></input>
+<input placeholder="请输入邮箱" bindinput="emailInp" type="email"></input>
+<button type="primary" bindtap="register">注册</button>
+</view>
+
+</view>

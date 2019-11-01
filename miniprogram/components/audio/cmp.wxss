@@ -1,0 +1,77 @@
+.audio-container{
+  width:100%;
+  margin:auto;
+  display:flex;
+  flex-direction: row;
+  margin-bottom: 20rpx;
+}
+.audioBg{
+  position: relative;
+  width:200rpx;
+  height:200rpx;
+  border-radius: 50%;
+}
+.audioimg{
+  width:100%;
+  height:100%;
+  border-radius: 50%;
+}
+.controls{
+  position:absolute;
+  top:50%;
+  left:50%;
+  margin-top:-40rpx;
+  margin-left:-40rpx;
+  width:80rpx;
+  height:80rpx;
+
+}
+.controlsImg{
+  width:100%;
+  height:100%;
+}
+.audioDetails{
+  width:70%;
+}
+.title{
+  margin:15rpx 0 40rpx 30rpx;
+}
+.audioAuthor{
+  font-size:24rpx;
+  margin-top:10rpx;
+  color:#888;
+}
+.time{
+  font-size:20rpx;
+  color:#999;
+}
+.audio-progress{
+ position: relative;
+ display:flex;
+ flex-direction: row;
+
+}
+.pro{
+  width:100%;
+  margin:0 5rpx;
+}
+.progress-circle{
+  position:absolute;
+  top:2rpx;
+  width:20rpx;
+  height:20rpx;
+  border-radius: 50%;
+  background-color:#000;
+}
+.article{
+margin-bottom:30rpx;
+border-bottom: 1px solid #eee;
+}
+.article-title{
+  font-size:30rpx;
+  font-weight: bold;
+}
+.article-content{
+  font-size:28rpx;
+  text-indent:2em;
+}

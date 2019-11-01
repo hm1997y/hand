@@ -1,0 +1,25 @@
+<view class="comment-wrapper" wx:for="{{commentArr}}" wx:key="{{item.commentid}} + comment">
+<view class="comment_head">
+<view class="imgBox">
+<image src="../../images/home.png" class="headImg"></image>
+</view>
+
+
+<view class="username">
+<view class="userName" class="name">{{item.name}}</view>
+<view class="content">{{item.content}}</view>
+</view>
+
+</view>
+
+<view class="comments">
+<view class="">
+<text class="comment">{{item.replay[0].name}}：</text>
+<text>{{item.replay[0].content}}</text>
+</view>
+<view class="comment">
+共{{item.replay.length}}条回复 >
+</view>
+</view>
+
+</view>

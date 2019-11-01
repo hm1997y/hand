@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+        "h-articlelist":"/components/articleList/cmp"
+     
+   }
+}

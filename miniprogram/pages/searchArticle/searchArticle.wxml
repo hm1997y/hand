@@ -1,0 +1,3 @@
+<view>
+<h-articlelist article-list="{{articles}}" hidden="{{load}}"/>
+</view>

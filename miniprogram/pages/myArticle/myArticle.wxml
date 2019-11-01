@@ -1,0 +1,4 @@
+
+<view>
+<h-articlelist article-list="{{myArticle}}" is-like="true"/>
+</view>

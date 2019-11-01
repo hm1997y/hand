@@ -1,0 +1,31 @@
+.icon-wrapper{
+  height:100rpx;
+  width:100%;
+  /* border:1px solid; */
+  display: flex;
+  margin-top:6rpx;
+  border-top:1px solid #f6f6f6;
+  justify-content: space-around;
+  padding-top:20rpx;
+}
+.icon-box{
+  width:60rpx;
+  height: 60rpx;
+  /* border:1px solid; */
+  text-align: center;
+  margin:0;
+  padding:0;
+}
+.icon{
+  width:60rpx;
+  height:60rpx;
+  /* border:1px solid; */
+}
+.num{
+  text-align: center;
+  font-size:28rpx;
+  color:#888;
+}
+.first{
+  margin-top:8rpx;
+}

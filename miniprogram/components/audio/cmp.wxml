@@ -1,0 +1,35 @@
+<view class="article">
+<view class="article-title">{{title}}</view>
+<view class="article-content">{{content}}</view>
+</view>
+<view class="audio-container">
+
+
+<view class="audioBg">
+<image src="{{audioImg}}" class="audioimg"></image>
+<view class="controls" bindtap="handlePlay">
+<image src="images/play.png" class="controlsImg" hidden="{{isPlay}}"></image>
+<image src="images/pause.png" class="controlsImg" hidden="{{!isPlay}}"></image>
+</view>
+</view>
+
+<view class="audioDetails">
+<view class="title">
+<view hidden="true">{{src}}</view>
+<view >{{audioName}}</view>
+<view class="audioAuthor">{{author}}</view>
+</view>
+
+ <view class="audio-progress" bindtouchstart='audioProgressMove'>
+ <text class="time">{{firstTime}}</text>
+  <progress percent='{{processPercent}}' stroke-width='3' class="pro"></progress>
+  <view class="progress-circle" style="left:{{progressCircleLeft + 'rpx'}}" bindtouchmove='audioCircleMove'></view>
+  <text class="time">{{alltime}}</text>
+  </view>
+</view>
+
+
+
+</view>
+
+

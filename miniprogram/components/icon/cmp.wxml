@@ -1,0 +1,29 @@
+
+<view class="icon-wrapper">
+<view class="first">
+<button bindtap="handleShare" open-type="{{shareStatus}}"  class="icon-box">
+<image src="images/share.png" class="icon"></image>
+</button>
+<view class="num">{{share}}</view>
+</view>
+
+<view>
+<image src="images/like.png" class="icon" bindtap="handleLike" hidden="{{isLike}}"></image>
+<image src="images/like1.png" class="icon" bindtap="handleLike" hidden="{{!isLike}}"></image>
+<view class="num">{{like}}</view>
+</view>
+
+<view>
+<image src="images/good.png" class="icon" bindtap="handleGood" hidden="{{isGood}}"></image>
+<image src="images/good1.png" class="icon" bindtap="handleGood" hidden="{{!isGood}}"></image>
+<view class="num">{{good}}</view>
+</view>
+
+<!-- <image src="images/like1.png" class="icon" bindtap="handleLike"  wx:show="!islike"></image> -->
+
+<view>
+<image src="images/comment.png" class="icon" bindtap="handleComment"></image>
+<view class="num">{{conmentNum}}</view>
+</view>
+
+</view>

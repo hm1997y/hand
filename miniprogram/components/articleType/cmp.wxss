@@ -1,0 +1,6 @@
+.type-wrapper{
+  padding:20rpx;
+  box-sizing: border-box;
+  background-color:#fff;
+  margin-bottom: 30rpx;
+}

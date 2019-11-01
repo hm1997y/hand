@@ -1,0 +1,4 @@
+<view class="headImg">
+<image src="{{imgSrc}}" class="img"></image>
+<text class="title">{{title}}</text>
+</view>

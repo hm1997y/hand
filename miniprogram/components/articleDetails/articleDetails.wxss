@@ -1,0 +1,110 @@
+/* pages/articleDetails/articleDetails.wxss */
+.container{
+  padding:0 10rpx;
+}
+.head{
+  font-size:50rpx;
+  font-weight:bold;
+}
+.littletitle{
+  color:#eee;
+  padding:10rpx 0;
+  font-size:30rpx;
+}
+/* .media-container{
+  width:730rpx;
+  height:530rpx;
+  margin:30rpx 0;
+} */
+.video{
+   width:730rpx;
+   height:530rpx;
+}
+swiper, image{
+   width:730rpx;
+   height:530rpx;
+}
+/* image{
+  width:100%;
+  height:100%;
+} */
+.article{
+ text-indent: 2em;
+}
+.last{
+  font-size:30rpx;
+  margin-top:20rpx;
+}
+.controls{
+  position:relative;
+  width:100%;
+  height:100%;
+}
+.controls-box{
+position:absolute;
+top:50%;
+left:50%;
+display:flex;
+flex-direction: column;
+align-items: center;
+width:100rpx;
+height:100rpx;
+margin-top:-50rpx;
+margin-left:-50rpx;
+background-color: rgba(0, 0, 0, .6);
+border-radius: 50%;
+}
+.controls-box cover-image{
+  width:30rpx;
+  height:30rpx;
+  margin-top:20rpx;
+}
+.controls-box cover-view{
+  font-size: 24rpx;
+  color:#fff;
+}
+.audio-container{
+  display:flex;
+  align-items: center;
+  padding:30rpx;
+  background-color:#fdfdfd;
+  border:1px solid #f2f2f2;
+  border-radius: 4rpx;
+}
+.audio-controls{
+margin-right:40rpx;
+}
+.audio-controls image{
+  width:80rpx;
+  height: 80rpx;
+}
+.audio-titile text{
+font-size: 36rpx;
+}
+.audio-from text{
+font-size: 28rpx;
+color:#eee;
+}
+.audio-progress{
+  position:relative;
+  /* width:520rpx; */
+  margin-top:20rpx;
+  margin-bottom: 20rpx;
+}
+.progress-circle{
+  position:absolute;
+  top:50%;
+  margin-top:-10rpx;
+  width:20rpx;
+  height:20rpx;
+  background-color:#00b26a;
+  border-radius: 50%;
+}
+.audio-time{
+  display:flex;
+  justify-content: space-between;
+}
+.audio-time text{
+  color:#666;
+  font-size: 24rpx;
+}

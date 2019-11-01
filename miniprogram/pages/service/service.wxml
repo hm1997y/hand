@@ -1,0 +1,80 @@
+<view>
+<view class="title">您的专员客服为您服务</view>
+<view class="notice">
+<text class="notice-title">公告</text>
+<text class="notice-content">此版本为上线测试版本，部分功能还未完善，请您见谅哦~</text>
+</view>
+<!-- 工具栏 -->
+<view class="tools">
+<view class="tool">
+<image src="images/工具.png" class="tool-img"></image>
+<view class="tool-font">修复账号异常</view>
+</view>
+<view class="tool">
+<image src="images/开锁.png" class="tool-img"></image>
+<view class="tool-font">找回密码</view>
+</view>
+<view class="tool">
+<image src="images/反馈.png" class="tool-img"></image>
+<view class="tool-font">快捷反馈</view>
+</view>
+<view class="tool">
+<image src="images/关注.png" class="tool-img"></image>
+<view class="tool-font">修正关注</view>
+</view>
+</view>
+
+<view class="tools">
+<view class="tool">
+<image src="images/粉丝数.png" class="tool-img"></image>
+<view class="tool-font">修正粉丝</view>
+</view>
+<view class="tool">
+<image src="images/会员.png" class="tool-img"></image>
+<view class="tool-font">会员特权</view>
+</view>
+<view class="tool">
+<image src="images/手机.png" class="tool-img"></image>
+<view class="tool-font">绑定手机</view>
+</view>
+<view class="tool">
+<image src="images/开通会员.png" class="tool-img"></image>
+<view class="tool-font">加入会员</view>
+</view>
+</view>
+
+<view class="keyWords">
+<view class="keyword-title">热门问题关键词</view>
+<view class="keyWord-lists">
+<view class="list">身份验证</view>
+<view class="list">超九图功能</view>
+<view class="list">找回密码名</view>
+<view class="list">换绑手机</view>
+<view class="list">视频社区</view>
+<view class="list">我的反馈</view>
+<view class="list">修改昵称</view>
+<view class="list">个人认证</view>
+<view class="list">解绑支付宝</view>
+<view class="list">昵称后图标</view>
+<view class="list">实时不显示</view>
+<view class="list">账号冻结</view>
+</view>
+</view>
+
+
+<view class="footer">
+<view class='footer-el'>
+<image class="footer-img" src='images/问题单.png'></image>
+<view class="footer-title">全部问题</view>
+</view>
+<view class='footer-el'>
+<image class="footer-img" src='images/客服.png'></image>
+<view class="footer-title">提问客服</view>
+</view>
+<view class='footer-el'>
+<image class="footer-img" src='images/自助服务.png'></image>
+<view class="footer-title">全部问题</view>
+</view>
+</view>
+</view>
+

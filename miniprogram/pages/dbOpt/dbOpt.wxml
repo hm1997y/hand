@@ -1,0 +1,35 @@
+<view class="container">
+<view class="title">数据库录入操作</view>
+<form bindsubmit="formSubmit" >
+<view class="inp">
+<text>name: </text>
+<input name="username" />
+</view>
+
+<view class="inp">
+pwd:
+<input name="password"></input>
+</view>
+<view>
+<button type="primary" form-type="submit">提交</button>
+</view>
+</form>
+</view>
+<view>
+<view>读取数据库</view>
+<view wx:for="{{userList}}" wx:key="{{index}}">
+<text>name: {{item.name}}</text>
+<text>pwd: {{item.password}}</text>
+</view>
+<button bindtap="getUser">获取信息</button>
+</view>
+<view>
+<view>更新数据
+<input value="{{changeValue}}" bindblur="getVal"></input>
+</view>
+<view>
+被更新的数据
+<input bindblur="getUpdateVal">{{updateVal}}</input>
+<button bindtap="updateAllData">更新</button>
+</view>
+</view>

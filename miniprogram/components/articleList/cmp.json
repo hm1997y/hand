@@ -1,0 +1,7 @@
+{
+  "component": true,
+  "usingComponents": {
+    "h-articleType":"/components/articleType/cmp",
+    "h-loading": "/components/loading/cmp"
+  }
+}

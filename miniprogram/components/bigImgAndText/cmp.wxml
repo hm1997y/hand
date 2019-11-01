@@ -1,0 +1,5 @@
+<view class="img-wrapper">
+<view class="img-title">{{title}}</view>
+<view class="img-content">{{content}}</view>
+<image src="{{imgSrc}}" class="bigImg"></image>
+</view>

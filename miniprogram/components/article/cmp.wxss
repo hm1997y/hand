@@ -1,0 +1,11 @@
+.article{
+margin-bottom:30rpx;
+}
+.article-title{
+  font-size:30rpx;
+  font-weight: bold;
+}
+.article-content{
+  font-size:28rpx;
+  text-indent:2em;
+}

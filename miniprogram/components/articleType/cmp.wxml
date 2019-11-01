@@ -1,0 +1,63 @@
+
+
+<view class="type-wrapper">
+<view>
+<h-head title="{{articleItem.name}}" img-src="{{articleItem.headImg}}" />
+</view>
+
+<view> 
+<!-- 音频和文字 audio-->
+<h-audio wx:if="{{articleItem.type == 'audio'}}" src="{{articleItem.audio}}" title="{{articleItem.title}}" content="{{articleItem.content}}" name="{{articleItem.audioName}}" author="{{articleItem.author}}" audio-img="{{articleItem.audioImg}}"/>
+<!-- 纯文字 purtext-->
+ <!-- <h-article wx:if="{{articleItem.type == 'purtext'}}"
+article-title="{{articleItem.title}}" article-content="{{articleItem.content}}" /> -->
+
+<!-- 文字和大图bigimg -->
+<h-imgtext wx:elif="{{articleItem.type == 'bigimg'}}"
+title="{{articleItem.title}}" content="{{articleItem.content}}" img-src="{{articleItem.imgSrc}}" />
+
+<!-- 文字和九图 nineimg-->
+<h-nineImg wx:elif="{{articleItem.type == 'nineimg'}}" main-text="{{articleItem.title}}" content="{{articleItem.content}}"  img-src="{{articleItem.imgSrc}}" />
+
+
+<!-- 文字和视频video -->
+<h-video wx:elif="{{articleItem.type == 'video'}}"
+src="{{articleItem.video}}" poster="{{articleItem.poster}}" main-text="{{articleItem.content}}" main-title="{{articleItem.title}}" videoId="myVideo" />
+
+<!-- 音频和文字 audio
+<h-audio wx:else src="{{articleItem.audio}}" title="{{articleItem.title}}" content="{{articleItem.content}}" name="{{articleItem.audioName}}" author="{{articleItem.author}}" audio-img="{{articleItem.audioImg}}"/> -->
+
+<!-- 纯文字 purtext-->
+ <h-article wx:else
+article-title="{{articleItem.title}}" article-content="{{articleItem.content}}" />
+
+</view>
+ <view>
+<h-icon share="{{articleItem.share}}" like="{{like}}" good="{{good}}" conment-num="{{articleItem.comment_num}}" comments="{{articleItem._comments}}" bind:onlike="onLike" bind:ongood="onGood" data-value="{{articleItem}}" is-good="{{articleItem.goodStatus == true}}"  is-like="{{articleItem.likeStatus == true}}"/>
+
+</view> 
+
+</view>
+
+
+<!-- <text>components/articleType/cmp.wxml</text>
+<h-head title="今天天气好" img-src="" />
+<h-article article-title="怎么找工作" article-content="能力很重要，基础知识掌握程度" />
+
+<!-- <h-imgtext title="人生好艰难南，活着好难，找工作好难" content="不努力，真的好颓废，0offer真的好痛苦，天啦，可不可以可怜我给我一个工作" img-src="https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=2350302849,3323337377&fm=26&gp=0.jpg" />
+<h-audio />
+<h-icon/>
+<h-imgtext title="人生好艰难南，活着好难，找工作好难" content="不努力，真的好颓废，0offer真的好痛苦，天啦，可不可以可怜我给我一个工作" img-src="https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=2350302849,3323337377&fm=26&gp=0.jpg" />
+
+
+<h-imgtext title="人生好艰难南，活着好难，找工作好难" content="不努力，真的好颓废，0offer真的好痛苦，天啦，可不可以可怜我给我一个工作" img-src="https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=2350302849,3323337377&fm=26&gp=0.jpg" />
+
+
+<h-imgtext title="人生好艰难南，活着好难，找工作好难" content="不努力，真的好颓废，0offer真的好痛苦，天啦，可不可以可怜我给我一个工作" img-src="https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=2350302849,3323337377&fm=26&gp=0.jpg" />
+
+<h-video src="http://wxsnsdy.tc.qq.com/105/20210/snsdyvideodownload?filekey=30280201010421301f0201690402534804102ca905ce620b1241b726bc41dcff44e00204012882540400&bizid=1023&hy=SH&fileparam=302c020101042530230204136ffd93020457e3c4ff02024ef202031e8d7f02030f42400204045a320a0201000400" poster="https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=2350302849,3323337377&fm=26&gp=0.jpg" duration="20" main-text="视频" videoId="myVideo" />
+
+</view>
+
+
+
