@@ -1,0 +1,32 @@
+<view>
+  <view class="title">{{comments.length}}条回复</view>
+  <view class="content">
+    <view class="comment-head">
+      <view class="imgBox">
+        <image src="../../images/home.png" class="headImg"></image>
+      </view>
+      <view class="username">
+        <view class="userName" class="name">{{commentHead.name}} 奶油曲奇</view>
+        <view class="time">{{commentHead.time}}</view>
+        <view class="content">{{commentHead.content}}</view>
+      </view>
+    </view>
+    <view>
+      <view class="comment-replay">
+        <view class="replay-item" wx:for="{{comments}}" wx:key="{{item.id}}">
+          <view class="imgBox">
+            <image src="../../images/home.png" class="headImg"></image>
+          </view>
+          <view class="replay-right">
+            <view class="replay-name">{{item.name}}</view>
+            <view class="replay-time">{{item.time}}</view>
+            <view class="replay-content">{{item.content}}</view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="replay-inp">
+  <input placeholder="回复评论" class="inp" placeholder-class="place-font"></input>
+  </view>
+</view>

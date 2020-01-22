@@ -41,6 +41,10 @@
 		"game": {
 			"list": []
 		},
+		"gamePlugin": {
+			"current": -1,
+			"list": []
+		},
 		"miniprogram": {
 			"current": 2,
 			"list": [
@@ -62,6 +66,27 @@
 					"name": "pages/searchArticle/searchArticle",
 					"pathName": "pages/searchArticle/searchArticle",
 					"query": "search",
+					"scene": null
+				},
+				{
+					"id": 3,
+					"name": "pages/commentDetail",
+					"pathName": "pages/commentDetail",
+					"query": "commentDetail",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/commentDetail/commentDetail",
+					"pathName": "pages/commentDetail/commentDetail",
+					"query": "commentDetail",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/userSet/userSet",
+					"pathName": "pages/userSet/userSet",
+					"query": "set",
 					"scene": null
 				}
 			]

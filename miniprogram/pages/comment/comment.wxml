@@ -17,7 +17,7 @@
 <text class="comment">{{item.replay[0].name}}：</text>
 <text>{{item.replay[0].content}}</text>
 </view>
-<view class="comment">
+<view class="comment" bindtap="toDetailComment" data-index="{{index}}">
 共{{item.replay.length}}条回复 >
 </view>
 </view>

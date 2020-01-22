@@ -2,9 +2,9 @@
 <!-- 标题栏 -->
 
 <view class="h_title">
-<view>扫一扫</view>
+<view bindtap="getScancode">扫一扫</view>
 <view>我</view>
-<view>设置</view>
+<view bindtap="toUserSet">设置</view>
 </view>
 <!-- 头像区 -->
 <view class="header">

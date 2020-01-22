@@ -10,7 +10,34 @@ Page({
     userData:Object,
     loginStatus:false,
     user:Object,
-    id:''
+    id:'',
+    result: ''
+  },
+  /**
+   * 到用户设置界面
+   */
+  toUserSet(){
+    wx.navigateTo({
+      url: '/pages/userSet/userSet',
+    })
+  },
+  /**
+   * 扫一扫
+   */
+  getScancode: function () {
+    var _this = this;
+    // 允许从相机和相册扫码
+    wx.scanCode({
+      success: (res) => {
+        var result = res.result;
+
+        _this.setData({
+          result: result,
+
+        })
+      }
+    })
+
   },
   /**
    * 图片上传

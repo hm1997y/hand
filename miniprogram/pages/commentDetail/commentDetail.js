@@ -1,35 +1,28 @@
-// miniprogram/pages/comment/comment.js
+// miniprogram/pages/commentDetail/commentDetail.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    commentArr:Object
+    comments:[],
+    commentHead:[]
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    console.log(JSON.parse(options.comments))
-    var obj = JSON.parse(options.comments);
+console.log(options)
+    let comments = JSON.parse(options.commentArr) 
+    let commentId = options.commentId
+    console.log(comments)
     this.setData({
-      commentArr:obj
+      comments:comments[commentId].replay,
+      commentHead:comments[commentId]
     })
   },
-  /**
-   * 评论详情页
-   */
-  toDetailComment(e){
-    console.log(e)
-    let commentId = e.target.dataset.index
-    let comments = JSON.stringify(this.data.commentArr)
-    wx.navigateTo({
-      // url: '/pages/commentDetail/commentDetail?commentId=' + commentId + '&commentArr=' + this.data.commentArr,
-      url: '/pages/commentDetail/commentDetail?commentId=' + commentId + '&commentArr=' + comments
-    })
-  },
+
   /**
    * 生命周期函数--监听页面初次渲染完成
    */

@@ -9,7 +9,9 @@
     "pages/comment/comment",
     "pages/myArticle/myArticle",
     "pages/searchArticle/searchArticle",
-    "pages/service/service"
+    "pages/service/service",
+    "pages/commentDetail/commentDetail",
+    "pages/userSet/userSet"
   ],
   "tabBar": {
     "selectedColor": "#ecae00",

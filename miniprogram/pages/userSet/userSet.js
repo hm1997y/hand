@@ -1,35 +1,29 @@
-// miniprogram/pages/comment/comment.js
+// miniprogram/pages/userSet/userSet.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    commentArr:Object
-  },
 
+  },
+  /**
+   * 退出登录
+   */
+  loginOut(){
+    console.log('111')
+    wx.clearStorage()
+    wx.navigateTo({
+      url: '/pages/index/index',
+    })
+  },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    console.log(JSON.parse(options.comments))
-    var obj = JSON.parse(options.comments);
-    this.setData({
-      commentArr:obj
-    })
+
   },
-  /**
-   * 评论详情页
-   */
-  toDetailComment(e){
-    console.log(e)
-    let commentId = e.target.dataset.index
-    let comments = JSON.stringify(this.data.commentArr)
-    wx.navigateTo({
-      // url: '/pages/commentDetail/commentDetail?commentId=' + commentId + '&commentArr=' + this.data.commentArr,
-      url: '/pages/commentDetail/commentDetail?commentId=' + commentId + '&commentArr=' + comments
-    })
-  },
+
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
