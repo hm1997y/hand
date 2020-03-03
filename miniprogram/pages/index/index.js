@@ -265,7 +265,6 @@ if(wx.pageScrollTo){
    * 下拉触底请求数据
    */
  getMoreData(index) {
-   
     let that = this;
     wx.cloud.callFunction({
       name: 'getArticleData',

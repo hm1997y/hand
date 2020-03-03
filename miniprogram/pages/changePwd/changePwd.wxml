@@ -1,3 +1,7 @@
+<!--miniprogram/pages/userSet/userSet.wxml-->
+<view>
+<view class="set-title">修改登录密码</view>
+<view class="content">
 <view class="login-wrapper">
 <input placeholder="请输入用户名" bindinput="usernameInp"></input>
 <input placeholder="请输入密码" bindinput="psdInp" type="password"></input>
@@ -9,9 +13,15 @@
 </view>
 </view>
 <view hidden="{{isLogin}}">
-<input placeholder="请再次输入密码" bindinput="rePws" type="password"></input>
+<input placeholder="请再次输入密码" bindblur="rePws" type="password"></input>
 <input placeholder="请输入电话号码" bindinput="phoneInp" type="phone"></input>
 <input placeholder="请输入邮箱" bindinput="emailInp" type="email"></input>
-<button type="primary" bindtap="register">注册</button>
+<view class="codeRow">
+<input placeholder="请输入图片验证码" bindblur="checkCode" class='codeInp'></input>
+<canvas class='canvas' style="width:{{cvs.width}};height:{{cvs.height}};" canvas-id="canvas" bindtap='onReady'></canvas>
+</view>
+<button type="primary" bindtap="register">确认修改</button>
+</view>
+</view>
 </view>
 </view>

@@ -11,7 +11,8 @@ Page({
     loginStatus:false,
     user:Object,
     id:'',
-    result: ''
+    result: '',
+   
   },
   /**
    * 到用户设置界面
@@ -22,9 +23,47 @@ Page({
     })
   },
   /**
+   * 我的相册
+   */
+  toMyImages(){
+    if (!this.data.loginStatus) {
+      wx.showModal({
+        title: '提示',
+        content: '您还未登录，请先登录',
+        success(res) {
+          if (res.confirm) {
+            wx.navigateTo({
+              url: '/pages/login/login',
+            })
+          }
+        }
+      })
+      return;
+    }
+
+    wx.navigateTo({
+      url:'/pages/myImages/myImages'
+    })
+  },
+  /**
    * 扫一扫
    */
   getScancode: function () {
+    if (!this.data.loginStatus) {
+      wx.showModal({
+        title: '提示',
+        content: '您还未登录，请先登录',
+        success(res) {
+          if (res.confirm) {
+            wx.navigateTo({
+              url: '/pages/login/login',
+            })
+          }
+        }
+      })
+      return;
+    }
+
     var _this = this;
     // 允许从相机和相册扫码
     wx.scanCode({
@@ -113,6 +152,21 @@ Page({
    */
 
   toService() {
+    if (!this.data.loginStatus) {
+      wx.showModal({
+        title: '提示',
+        content: '您还未登录，请先登录',
+        success(res) {
+          if (res.confirm) {
+            wx.navigateTo({
+              url: '/pages/login/login',
+            })
+          }
+        }
+      })
+      return;
+    }
+
     wx.navigateTo({
       url: '/pages/service/service',
     })
@@ -239,6 +293,20 @@ Page({
    * 用户点击右上角分享
    */
   onShareAppMessage: function () {
+    if (!this.data.loginStatus) {
+      wx.showModal({
+        title: '提示',
+        content: '您还未登录，请先登录',
+        success(res) {
+          if (res.confirm) {
+            wx.navigateTo({
+              url: '/pages/login/login',
+            })
+          }
+        }
+      })
+      return;
+    }
 
   }
 })

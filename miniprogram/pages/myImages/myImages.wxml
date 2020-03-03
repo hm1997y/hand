@@ -1,0 +1,23 @@
+<view class="myImagesContainer">
+<view class="imgBox" wx:for="{{myImages}}" wx:key="{{index}} + img">
+<image src="{{item}}" class="imgItem"></image>
+</view>
+<view class="imgBox">
+<image src="../../images/相册.png" class="imgItem"></image>
+</view>
+<view class="imgBox">
+<image src="../../images/相册.png" class="imgItem"></image>
+</view>
+<view class="imgBox">
+<image src="../../images/相册.png" class="imgItem"></image>
+</view>
+<view class="imgBox">
+<image src="../../images/相册.png" class="imgItem"></image>
+</view>
+<view class="imgBox">
+<image src="../../images/相册.png" class="imgItem"></image>
+</view>
+<view class="imgBox">
+<image src="../../images/相册.png" class="imgItem"></image>
+</view>
+</view>

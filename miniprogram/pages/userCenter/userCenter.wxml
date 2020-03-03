@@ -24,7 +24,7 @@
 
 
 <view class="lifeList">
-<view class="list">
+<view class="list" catchtap="toMyImages">
 <image src="../../images/相册.png" class="listImg"></image>
 <text class="listTitle">我的相册</text>
 </view>

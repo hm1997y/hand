@@ -1,37 +1,13 @@
-// miniprogram/pages/userSet/userSet.js
+// miniprogram/pages/myImages/myImages.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
+    myImages:['../../images/相册.png', '../../images/社区动态.png']
+  },
 
-  },
-  /**
-   * 退出登录
-   */
-  loginOut(){
-    console.log('111')
-    wx.clearStorage()
-    wx.reLaunch({
-      url: '/pages/index/index',
-    })
-    // wx.navigateTo({
-    //   url: '/pages/index/index',
-    // })
-    // wx.navigateTo({
-    //   url: '/pages/index/index',
-    // })
-  },
-  /**
-   * 修改登录密码
-   */
-  changePwd(){
-    console.log('change')
-    wx.navigateTo({
-      url: '/pages/changePwd/changePwd',
-    })
-  },
   /**
    * 生命周期函数--监听页面加载
    */

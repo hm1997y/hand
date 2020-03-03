@@ -1,0 +1,25 @@
+.myImagesContainer{
+    width:100vw;
+    height:100vh;
+    display:flex;
+    flex-direction:row;
+   justify-content:space-around;
+   margin-top:10rpx;
+    box-sizing:border-box;
+    flex-wrap:wrap;
+     align-content:flex-start;
+}
+.imgBox{
+    width:200rpx;
+    height:200rpx;
+    padding:10rpx 0;
+}
+.imgBox:hover .imgItem{
+    transform:scale(1.2);
+    transition:all 0.2s;
+}
+.imgItem{
+    width:100%;
+    height:100%;
+    border:1px solid;
+}

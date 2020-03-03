@@ -88,6 +88,20 @@
 					"pathName": "pages/userSet/userSet",
 					"query": "set",
 					"scene": null
+				},
+				{
+					"id": 6,
+					"name": "pages/changePwd/changePwd",
+					"pathName": "pages/changePwd/changePwd",
+					"query": "change",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/myImages/myImages",
+					"pathName": "pages/myImages/myImages",
+					"query": "myimages",
+					"scene": null
 				}
 			]
 		}

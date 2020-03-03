@@ -2,7 +2,7 @@
 <view>
 <view class="set-title">设置</view>
 <view class="content">
-<view class="setChangePwd">修改登录密码</view>
+<view class="setChangePwd" bindtap="changePwd">修改登录密码</view>
 <view class="loginOut" bindtap="loginOut">退出登录</view>
 </view>
 </view>
