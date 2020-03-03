@@ -12,7 +12,8 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    changeStatus:true,
+    loginStatus:false
   },
   /**
    * 用户名输入
@@ -70,6 +71,7 @@ Page({
         title:'请输入手机号',
         icon:'none'
       })
+      return
     }
     email = e.detail.value
   },
@@ -106,6 +108,19 @@ Page({
       })
       return
     }
+
+    if(!this.data.changeStatus){
+      wx.showToast({
+        title:'验证码错误',
+        icon:'none'
+      })
+      return
+    }else{
+      wx.showToast({
+        title:'修改成功',
+        icon:'none'
+      })
+    }
     wx.cloud.callFunction({
       name:'changePassword',
       data:{
@@ -125,6 +140,7 @@ Page({
    */
   checkCode(e){
     var val = e.detail.value
+    let that = this
     if(val == ''){
       wx.showToast({
         title:'请输入验证码！',
@@ -135,9 +151,16 @@ Page({
         title:'修改成功！'
       })
     }else{
-      wx.showToast({
-        title:'验证码错误！',
-        icon:'none'
+      wx.showModal({
+        title: '提示',
+        content: '验证码错误',
+        success(res){
+          if(res.confirm){
+            that.setData({
+              changeStatus:false
+            })
+          }
+        }
       })
       this.onReady()
     }
@@ -177,12 +200,6 @@ Page({
       }
     }
     return pwd;
-  },
-  /**
-   * 确认修改
-   */
-  register(){
-
   },
 
   /**
@@ -224,6 +241,29 @@ Page({
    * 用户点击右上角分享
    */
   onShareAppMessage: function () {
-
+    wx.getStorage({
+      key: 'userInfo',
+      success: function(res) {
+        if(res){
+          that.setData({
+            loginStatus:true
+          })
+        }
+      },
+    })
+    if(!this.data.loginStatus){
+    wx.showModal({
+      title:'提示',
+      content:'您还未登录，请先登录',
+      success(res){
+        if(res.confirm){
+          wx.navigateTo({
+            url: '/pages/login/login',
+          })
+        }
+      }
+    })
+      return
+    }
   }
 })

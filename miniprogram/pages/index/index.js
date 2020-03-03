@@ -316,6 +316,19 @@ if(wx.pageScrollTo){
    * 用户点击右上角分享
    */
   onShareAppMessage: function () {
-
+    if(!this.data.loginStatus){
+      wx.showModal({
+        title:'提示',
+        content:'您还未登录，请先登录',
+        success(res){
+          if(res.confirm){
+            wx.navigateTo({
+              url: '/pages/login/login',
+            })
+          }
+        }
+      })
+        return
+      }
   }
 })
