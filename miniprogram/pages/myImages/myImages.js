@@ -33,7 +33,6 @@ Page({
               albumArr: that.data.myImages
             }
           }).then(res => {
-            console.log(res)
           })
         }, 0)
 
@@ -81,6 +80,11 @@ Page({
          
               that.setData({
                 myImages: res.data[0].albumArr
+              })
+              wx.showToast({
+                title:'删除成功',
+                icon:'success',
+                duration:1000
               })
             })
           })
