@@ -36,7 +36,7 @@
 <image src="../../images/关注.png" class="listImg"></image>
 <text class="listTitle">我的关注</text>
 </view>
-<view class="list">
+<view class="list" catchtap="getPosition">
 <image src="../../images/足迹.png" class="listImg"></image>
 <text class="listTitle">我的足迹</text>
 </view>

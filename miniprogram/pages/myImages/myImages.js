@@ -32,15 +32,10 @@ Page({
             data: {
               albumArr: that.data.myImages
             }
-          }).then(res => {
-          })
+          }).then(res => {})
         }, 0)
-
-
       }
     })
-
-
   },
   /**
    * 显示删除按钮
@@ -66,28 +61,28 @@ Page({
       content: '确认要从我的相册移除该图片',
       success(res) {
         if (res.confirm) {
-          
+
           let resList = that.data.myImages.splice(that.data.deleteId, 1)
           db.collection('myAlbum').doc('1583390504948_0.1860688340445611_33581362').update({
-            data:{
-              albumArr:resList
+            data: {
+              albumArr: resList
             }
           }).then(res => {
             db.collection('myAlbum').where({
               _id: '1583390504948_0.1860688340445611_33581362'
             }).get().then(res => {
-         
+
               that.setData({
                 myImages: res.data[0].albumArr
               })
               wx.showToast({
-                title:'删除成功',
-                icon:'success',
-                duration:1000
+                title: '删除成功',
+                icon: 'success',
+                duration: 1000
               })
             })
           })
-        
+
         }
       }
     })

@@ -1,0 +1,6 @@
+<view class="container">
+<view class="item">当前纬度为：{{latitude}}</view>
+<view class="item">当前经度为：{{longitude}}</view>
+<view class="item">当前速度为：{{speed}}</view>
+<view class="item">当前位置的精确度：{{accuracy}}</view>
+</view>

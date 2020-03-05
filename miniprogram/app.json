@@ -13,7 +13,8 @@
     "pages/commentDetail/commentDetail",
     "pages/userSet/userSet",
     "pages/changePwd/changePwd",
-    "pages/myImages/myImages"
+    "pages/myImages/myImages",
+    "pages/myPosition/myPosition"
   ],
   "tabBar": {
     "selectedColor": "#ecae00",
@@ -45,6 +46,19 @@
     "navigationBarTitleText": "Mobile Community",
     "navigationBarTextStyle": "white",
     "enablePullDownRefresh": true
+  },
+  "networkTimeout": {
+    "request": 10000,
+    "downloadFile": 10000
+  },
+  "debug": true,
+  "navigateToMinProgramAppIdList": [
+    "wxe5f52902cf4de896"
+  ],
+  "permission": {
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于小程序位置接口的效果展示"
+    }
   },
   "sitemapLocation": "sitemap.json"
 }
