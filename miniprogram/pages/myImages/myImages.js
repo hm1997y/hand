@@ -70,17 +70,17 @@ Page({
         if (res.confirm) {
           
           let resList = that.data.myImages.splice(that.data.deleteId, 1)
-          console.log(that.data.deleteId,resList)
+
           db.collection('myAlbum').doc('1583390504948_0.1860688340445611_33581362').update({
             data:{
               albumArr:resList
             }
           }).then(res => {
-            console.log(res)
+
             db.collection('myAlbum').where({
               _id: '1583390504948_0.1860688340445611_33581362'
             }).get().then(res => {
-              console.log(res.data[0].albumArr)
+         
               that.setData({
                 myImages: res.data[0].albumArr
               })
