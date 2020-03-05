@@ -10,9 +10,26 @@
      align-content:flex-start;
 }
 .imgBox{
+    position:relative;
     width:200rpx;
     height:200rpx;
     padding:10rpx 0;
+}
+.model{
+    position:absolute;
+    top:0;
+    left:0;
+    bottom:0;
+    right:0;
+    background-color:rgba(0, 0, 0, .5)
+}
+.model > span{
+    display:inline-block;
+    width:200rpx;
+    font-size:28rpx;
+    color:#fff;
+    text-align:center;
+    line-height:200rpx;
 }
 .imgBox:hover .imgItem{
     transform:scale(1.2);
@@ -22,4 +39,11 @@
     width:100%;
     height:100%;
     border:1px solid;
+}
+.title{
+    font-size:28rpx;
+    line-height:200rpx;
+}
+.title:hover{
+    color:green;
 }

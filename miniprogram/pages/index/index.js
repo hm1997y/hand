@@ -149,6 +149,9 @@ getData(index){
      
 
   },
+  /**
+   * 跳转登录界面
+   */
   tologin(){
     wx.navigateTo({
       url: '/pages/login/login',
