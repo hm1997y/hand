@@ -60,7 +60,6 @@ Page({
    * @param {*} options 
    */
   deleteImg() {
-    console.log('shanchu')
     let that = this
     wx.showModal({
       title: '提示',
