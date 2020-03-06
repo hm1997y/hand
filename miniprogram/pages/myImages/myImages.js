@@ -16,13 +16,10 @@ Page({
    * @param {*} options 
    */
   putImg() {
-    let timer = null
     console.log('上传')
     let that = this
     wx.chooseImage({
       success: function (res) {
-        clearTimeout(timer)
-        console.log(res)
         that.setData({
           imgSrc: res.tempFilePaths[0],
           myImages: [res.tempFilePaths[0], ...that.data.myImages]
@@ -38,6 +35,15 @@ Page({
     })
   },
   /**
+   * 隐藏删除按钮
+   * @param {*} e 
+   */
+  cancleDelete(){
+    this.setData({
+      deleteId:null
+    })
+  },
+  /**
    * 显示删除按钮
    * @param {*} options 
    */
@@ -47,8 +53,6 @@ Page({
       deleteId: id
     })
     console.log(e.currentTarget.dataset)
-
-    console.log(this.data.myImages)
   },
   /**
    * 删除图片

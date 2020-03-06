@@ -1,8 +1,8 @@
 
 
-<view class="myImagesContainer">
+<view class="myImagesContainer" catchtap="cancleDelete">
 
-<view class="imgBox" wx:for="{{myImages}}" wx:key="{{index}} + img" data-id="{{index}}" bindtap="handleDelete">
+<view class="imgBox" wx:for="{{myImages}}" wx:key="{{index}} + img" data-id="{{index}}" catchtap="handleDelete">
 <image src="{{item}}" class="imgItem"></image>
 <view class="model" hidden="{{index == deleteId ? false : true}}">
 <span catchtap="deleteImg">删除 </span>

@@ -15,6 +15,28 @@ Page({
 
   },
   /**
+   * 到社区动态
+   */
+  toNowMessage(){
+    if (!this.data.loginStatus) {
+      wx.showModal({
+        title: '提示',
+        content: '您还未登录，请先登录',
+        success(res) {
+          if (res.confirm) {
+            wx.navigateTo({
+              url: '/pages/login/login',
+            })
+          }
+        }
+      })
+      return;
+    }
+    wx.navigateTo({
+      url:'/pages/index/index'
+    })
+  },
+  /**
    * 到用户设置界面
    */
   toUserSet() {
