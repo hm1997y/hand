@@ -51,7 +51,7 @@
 <image src="../../images/客服.png" class="listImg"></image>
 <text class="listTitle">我的客服</text>
 </view>
-<view class="list">
+<view class="list" catchtap="toMyWallet">
 <image src="../../images/钱包.png" class="listImg"></image>
 <text class="listTitle">我的钱包</text>
 </view>

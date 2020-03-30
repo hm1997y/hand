@@ -15,6 +15,14 @@ Page({
 
   },
   /**
+   * 钱包界面
+   */
+  toMyWallet(){
+    wx.navigateTo({
+      // url:'/pages/'
+    })
+  },
+  /**
    * 到社区动态
    */
   toNowMessage(){
