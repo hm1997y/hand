@@ -1,0 +1,243 @@
+.body{
+	width: 100vw;
+	height: 100vh;
+	background: #111622;
+	overflow: hidden;
+	position: relative
+}
+.noWallerBox{
+	width: 100vw;
+	height: 78vh;
+	overflow: hidden
+
+}
+.noWallerIcon{
+	width: 120rpx;
+	height: 120rpx;
+	position: absolute;
+	top: 180rpx;
+	left: 50%;
+	margin-left: -60rpx
+}
+.noTit{
+	display: flex;
+	text-align: center;
+	justify-content: center;
+	margin-top: 350rpx;
+	font-size: 15px;
+	color: #FFFFFF
+}
+/* 有钱包地址 */
+.haveWallerBox{
+	width: 100vw;
+	height: 78vh;
+	
+}
+.headBox{
+	width: 100vw;
+	height: 10vh;
+	box-sizing: border-box;
+	border-bottom: 1px solid #2E3546;
+}
+.headDiv{
+	width: 95vw;
+	height: 10vh;
+	margin-left: 5vw;
+	display: flex;
+	flex-direction: row;
+}
+.head{
+	font-size: 14px;
+	line-height: 10vh;
+	color: #828793
+}
+.headNum{
+	flex: 2;
+
+}
+.headAddress{
+	flex: 8;
+}
+
+.headName{
+	flex: 4;
+	text-align: center
+}
+.headDelete{
+	flex: 2;
+	text-align: center
+}
+.bodyBox{
+	width: 100vw;
+	height: 75vh;
+	overflow: auto
+}
+.bodyDiv{
+	width: 95vw;
+	height: 10vh;
+	margin-left: 5vw;
+	border-bottom: 1px solid #2E3546;
+	display: flex;
+	flex-direction: row
+}
+.body2{
+	font-size: 13px;
+	color: #FFFFFF;
+	line-height: 10vh;
+}
+.bodyNum{
+	flex: 2;
+}
+.bodyAddress{
+	flex: 8;
+	word-break: break-all; 
+	word-wrap:break-word;
+	line-height: 2;
+	font-size: 10px;
+	margin-top: 2.3vh
+}
+.bodyName{
+	flex: 4;
+	text-align: center;
+	font-size: 12px
+}
+.bodyDelete{
+	flex: 2;
+	text-align: center;
+	position: relative
+}
+.deleteIcon{
+	width: 36rpx;
+	height: 36rpx;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-left: -13rpx;
+	margin-top: -13rpx
+}
+
+
+.addWallerBtn{
+	width: 90vw;
+	height: 8vh;
+	background:linear-gradient(315deg,rgba(126,0,255,1) 0%,rgba(0,120,255,1) 100%);
+	border-radius: 25px;
+	position: absolute;
+	bottom: 7vh;
+	line-height: 8vh;
+	text-align: center;
+	color: #FFFFFF;
+	margin-left: 5vw
+}
+
+.deleteBox{
+	width: 100vw;
+	height: 100vh;
+	position: fixed;
+	top: 0;
+	left: 0;
+	background: rgba(0,0,0,0.4);
+	z-index: 20
+}
+.exitBox{
+	width: 70vw;
+	height: 40vh;
+	background: rgba(26,32,46,1);
+	position: absolute;
+	top: 26%;
+	left: 50%;
+	margin-left: -35vw;
+	border-radius: 10px;
+	overflow: hidden
+}
+.title1{
+	display: flex;
+	text-align: center;
+	justify-content: center;
+	margin-top: 2vh;
+	color: #FFFFFF
+}
+.inputBox{
+	width: 86%;
+	height: 7vh;
+	margin-left: 7%;
+	margin-top: 50rpx;
+	
+	border: 1px solid #8E8E93;
+	border-radius: 5px
+} 
+.codeBox{
+	width: 60%;
+	height: 7vh;
+	float: left;
+	overflow: hidden;
+	box-sizing: border-box;
+}
+.codeInput{
+	width: 100%;
+	height: 100%;
+	float: left;
+	color: #FFFFFF;
+	font-size: 13px;
+	padding-left: 20rpx
+}
+.btnBox{
+	height: 9vh;
+	width: 100%;
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	display: flex;
+	flex-direction: row
+}
+.leftDiv{
+	flex: 1;
+	height: 9vh;
+	box-sizing: border-box;
+	border-right: 1px solid #2B2F39;
+		border-top: 1px solid #2B2F39;
+	line-height: 9vh;
+	text-align: center;
+	color: #828793;
+}
+.rightDiv{
+		flex: 1;
+	height: 9vh;
+	box-sizing: border-box;
+	border-top: 1px solid #2B2F39;
+	line-height: 9vh;
+	text-align: center;
+	color: #FFFFFF;
+}
+.captcha{
+	width: 40%;
+	height: 7vh;
+	float: left;
+	color: #FFFFFF!important;
+	background: red;
+	line-height: 7vh;
+	border: none!important;
+}
+
+button[plain][disabled] {
+	color: rgba(255, 255, 255, 0.5);
+	background:  rgba(255, 255, 255, 0);
+}
+.noMsg{
+	display: flex;
+	justify-content: center;
+	font-size: 18px;
+	color: #828793;
+	margin-top: 120rpx
+}
+.imgBox{
+	width: 40%;
+	height: 7vh;
+	float: left;
+	overflow: hidden
+}
+.codeImg{ 
+	width: 100%; 
+	height: 100%;
+
+}

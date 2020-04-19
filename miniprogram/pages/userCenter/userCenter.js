@@ -166,6 +166,14 @@ Page({
     })
   },
   /**
+   * 跳转钱包页面
+   */
+  toWallet(){
+    wx.navigateTo({
+      url: '/pages/waller/waller',
+    })
+  },
+  /**
    * 
    * 生命周期函数--监听页面加载
    */

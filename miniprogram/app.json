@@ -11,7 +11,9 @@
     "pages/searchArticle/searchArticle",
     "pages/service/service",
     "pages/commentDetail/commentDetail",
-    "pages/userSet/userSet"
+    "pages/userSet/userSet",
+    "pages/changePwd/changePwd",
+    "pages/waller/waller"
   ],
   "tabBar": {
     "selectedColor": "#ecae00",

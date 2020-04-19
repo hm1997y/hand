@@ -1,0 +1,69 @@
+<!-- 钱包管理 -->
+<view class="body">
+<!-- 没有钱包地址显示组件 -->
+<view class="noWallerBox" hidden="{{show}}">
+	<image src="../../image/OtherIcon/NoWaller.svg" class="noWallerIcon"></image>
+	<text class="noTit">暂无钱包地址，请手动添加钱包地址</text>
+</view>
+
+<!-- 有钱包地址的组件 -->
+<view class="haveWallerBox" hidden="{{!show}}">
+		<view class="headBox">
+			<view class="headDiv">
+				<view class="headNum head">序号</view>
+				<view class="headAddress head">钱包地址</view>
+				<view class="headName head">备注</view>
+				<view class="headDelete head">操作</view>
+			</view>
+
+		<view class="bodyBox">
+		<!-- 数据 -->
+			<view class="bodyDiv" wx:for="{{list}}" wx:for-item="info" wx:key="Index" wx:for-index="Index">
+				<view class="bodyNum body2">{{Index+1}}</view>
+				<text selectable='true' class="bodyAddress body2">{{info.walletId}}</text>
+				<view class="bodyName body2">{{info.notes}}</view>
+				<view class="bodyDelete body2" bindtap="showDelete" data-bean="{{info}}">
+				<image src="../../image/OtherIcon/icon_delete.svg" class="deleteIcon"></image>
+				</view>
+			</view>
+						<view class="noMsg" hidden="{{msgState}}">暂无信息</view>
+		<!-- 删除钱包地址模态框 -->
+		
+			<view class="deleteBox" hidden="{{deletaState}}">
+					<view class="exitBox">
+			<text class="title1">提示</text>
+			
+				<view class="inputBox" style="border: 1px solid #8E8E93;	border-radius: 5px;overflow: hidden;" >
+			<view class="codeBox" style="border: none;" >
+				<input class="codeInput" type="number" bindinput="imgMsg" value="{{imgCode}}"></input>
+			</view>
+			<view class="imgBox" bindtap="imgAgain" >
+				<image class="codeImg" src="{{url}}"></image>
+			</view>
+			</view>
+			<view class="inputBox">
+			<view class="codeBox">
+				<input class="codeInput" type="number" value="{{code}}" bindinput="codeMsg"></input>
+			</view>
+						 <button class="captcha" bindtap="captcha" disabled="{{captchaDisabled}}" plain="true" disabled-class="disabled">{{captchaLabel}}</button>
+			</view>
+			<view class="btnBox">
+				<view class="leftDiv" bindtap="resive">取消</view>
+				<view class="rightDiv" bindtap="sureDelete">确定</view>
+			</view>
+	</view>
+			</view>
+
+		
+
+		
+
+			
+		</view>
+		</view>
+</view>
+
+<!-- 添加钱包按钮 -->
+<view class="addWallerBtn" bindtap="goAddWaller">	添加钱包</view>
+
+</view>
