@@ -6,25 +6,94 @@ Page({
    * 页面的初始数据
    */
   data: {
-    headSrc:'',
-    userData:Object,
-    loginStatus:false,
-    user:Object,
-    id:'',
-    result: ''
+    headSrc: '',
+    userData: Object,
+    loginStatus: false,
+    user: Object,
+    id: '',
+    result: '',
+
+  },
+  /**
+   * 钱包界面
+   */
+  toMyWallet(){
+    wx.navigateTo({
+      url:'/pages/waller/waller'
+    })
+  },
+  /**
+   * 到社区动态
+   */
+  toNowMessage(){
+    if (!this.data.loginStatus) {
+      wx.showModal({
+        title: '提示',
+        content: '您还未登录，请先登录',
+        success(res) {
+          if (res.confirm) {
+            wx.navigateTo({
+              url: '/pages/login/login',
+            })
+          }
+        }
+      })
+      return;
+    }
+    wx.navigateTo({
+      url:'/pages/index/index'
+    })
   },
   /**
    * 到用户设置界面
    */
-  toUserSet(){
+  toUserSet() {
     wx.navigateTo({
       url: '/pages/userSet/userSet',
+    })
+  },
+  /**
+   * 我的相册
+   */
+  toMyImages() {
+    if (!this.data.loginStatus) {
+      wx.showModal({
+        title: '提示',
+        content: '您还未登录，请先登录',
+        success(res) {
+          if (res.confirm) {
+            wx.navigateTo({
+              url: '/pages/login/login',
+            })
+          }
+        }
+      })
+      return;
+    }
+
+    wx.navigateTo({
+      url: '/pages/myImages/myImages'
     })
   },
   /**
    * 扫一扫
    */
   getScancode: function () {
+    if (!this.data.loginStatus) {
+      wx.showModal({
+        title: '提示',
+        content: '您还未登录，请先登录',
+        success(res) {
+          if (res.confirm) {
+            wx.navigateTo({
+              url: '/pages/login/login',
+            })
+          }
+        }
+      })
+      return;
+    }
+
     var _this = this;
     // 允许从相机和相册扫码
     wx.scanCode({
@@ -42,13 +111,13 @@ Page({
   /**
    * 图片上传
    */
-  chooseImg(){
-    if(!this.data.loginStatus){
+  chooseImg() {
+    if (!this.data.loginStatus) {
       wx.showModal({
         title: '提示',
         content: '您还未登录，请先登录',
-        success(res){
-          if(res.confirm){
+        success(res) {
+          if (res.confirm) {
             wx.navigateTo({
               url: '/pages/login/login',
             })
@@ -63,65 +132,80 @@ Page({
     }
     let that = this;
     wx.chooseImage({
-      success: function(res) {
+      success: function (res) {
         that.setData({
-         headSrc:res.tempFilePaths[0]
+          headSrc: res.tempFilePaths[0]
         })
 
         /**
          * 设置图片缓存，登录状态缓存，更新数据库信息
          */
-       
-  wx.getStorage({
-    key: 'userInfo',
-    success: function(res) {
-      console.log(res)
-      var userInfo = {
-        ...res.data,
-        headSrc:that.data.headSrc
-      }
-      that.setData({
-        userData:userInfo,
-        id:res.data.id
-      })
-      db.collection('login').doc(res.data.id).update({
-        data: {
-          headSrc: that.data.headSrc
-        }
-      }).then(res => {
-        
-      })
-    },
-  })
-  wx.removeStorage({
-    key: 'userInfo',
-    success: function(res) {
-      wx.setStorage({
-        key: 'userInfo',
-        data: that.data.userData
-      })
-    },
-  })
-  console.log(that.data.userData.headSrc)
+
+        wx.getStorage({
+          key: 'userInfo',
+          success: function (res) {
+            console.log(res)
+            var userInfo = {
+              ...res.data,
+              headSrc: that.data.headSrc
+            }
+            that.setData({
+              userData: userInfo,
+              id: res.data.id
+            })
+            db.collection('login').doc(res.data.id).update({
+              data: {
+                headSrc: that.data.headSrc
+              }
+            }).then(res => {
+
+            })
+          },
+        })
+        wx.removeStorage({
+          key: 'userInfo',
+          success: function (res) {
+            wx.setStorage({
+              key: 'userInfo',
+              data: that.data.userData
+            })
+          },
+        })
+        console.log(that.data.userData.headSrc)
       },
     })
 
-   
+
   },
   /**
    * 跳转客服页面
    */
 
   toService() {
+    if (!this.data.loginStatus) {
+      wx.showModal({
+        title: '提示',
+        content: '您还未登录，请先登录',
+        success(res) {
+          if (res.confirm) {
+            wx.navigateTo({
+              url: '/pages/login/login',
+            })
+          }
+        }
+      })
+      return;
+    }
+
     wx.navigateTo({
       url: '/pages/service/service',
     })
   },
-  
+
   /**
    * 跳转文章收藏页面
    */
-  myArticle(){
+  myArticle() {
     if (!this.data.loginStatus) {
       wx.showModal({
         title: '提示',
@@ -141,11 +225,11 @@ Page({
       url: '/pages/myArticle/myArticle',
     })
   },
- 
+
   /**
    * 发表文章
    */
-  publish(){
+  publish() {
     if (!this.data.loginStatus) {
       wx.showModal({
         title: '提示',
@@ -181,24 +265,56 @@ Page({
     var that = this;
     wx.getStorage({
       key: 'userInfo',
-      success: function(res) {
+      success: function (res) {
         console.log(res)
-        if(res){
+        if (res) {
           var id = res.data.id
           console.log(id)
           db.collection('login').where({
-            _id:id
-         }).get().then((res) => {
-           console.log(res.data)
-           that.setData({
-             user:res.data[0],
-             loginStatus:true
-           })
-         })
-         
+            _id: id
+          }).get().then((res) => {
+            console.log(res.data)
+            that.setData({
+              user: res.data[0],
+              loginStatus: true
+            })
+          })
+
         }
       },
     })
+  },
+  /**
+   * 定位，获取当前位置
+   */
+  getPosition() {
+    console.log('获取位置')
+    if (!this.data.loginStatus) {
+      wx.showModal({
+        title: '提示',
+        content: '您还未登录，请先登录',
+        success(res) {
+          if (res.confirm) {
+            wx.navigateTo({
+              url: '/pages/login/login',
+            })
+          }
+        }
+      })
+      return;
+    }
+    wx.navigateTo({
+      url:'/pages/myPosition/myPosition'
+    })
+    // wx.getLocation({
+    //   type: 'wgs84',
+    //   success(res) {
+    //     const latitude = res.latitude
+    //     const longitude = res.longitude
+    //     const speed = res.speed
+    //     const accuracy = res.accuracy
+    //   }
+    // })
   },
 
   /**
@@ -247,6 +363,20 @@ Page({
    * 用户点击右上角分享
    */
   onShareAppMessage: function () {
+    if (!this.data.loginStatus) {
+      wx.showModal({
+        title: '提示',
+        content: '您还未登录，请先登录',
+        success(res) {
+          if (res.confirm) {
+            wx.navigateTo({
+              url: '/pages/login/login',
+            })
+          }
+        }
+      })
+      return;
+    }
 
   }
 })

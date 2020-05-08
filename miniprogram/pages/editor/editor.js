@@ -1,4 +1,4 @@
-// miniprogram/pages/userSet/userSet.js
+// pages/editor/editor.js
 Page({
 
   /**
@@ -7,44 +7,7 @@ Page({
   data: {
 
   },
-  /**
-   * 退出登录
-   */
-  loginOut(){
-    console.log('111')
-    wx.clearStorage()
 
-    setTimeout(() => {
-  wx.navigateTo({
-      url: '/pages/index/index',
-    })
-    }, 500)
-  
-
-    wx.reLaunch({
-      url: '/pages/index/index',
-    })
-    // wx.navigateTo({
-    //   url: '/pages/index/index',
-    // })
-    // wx.navigateTo({
-    //   url: '/pages/index/index',
-    // })
-
-  },
-  /**
-   * 修改登录密码
-   */
-  changePwd(){
-
-    console.log(0)
-
-    console.log('change')
-    wx.navigateTo({
-      url: '/pages/changePwd/changePwd',
-    })
-
-  },
   /**
    * 生命周期函数--监听页面加载
    */

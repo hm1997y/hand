@@ -90,10 +90,24 @@
 					"scene": null
 				},
 				{
+<<<<<<< HEAD
 					"id": -1,
 					"name": "pages/waller/waller",
 					"pathName": "pages/waller/waller",
 					"query": "waller",
+=======
+					"id": 6,
+					"name": "pages/changePwd/changePwd",
+					"pathName": "pages/changePwd/changePwd",
+					"query": "change",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/myImages/myImages",
+					"pathName": "pages/myImages/myImages",
+					"query": "myimages",
+>>>>>>> b97a5810bc87a101b9fc78cd249d63d8730a57f5
 					"scene": null
 				}
 			]

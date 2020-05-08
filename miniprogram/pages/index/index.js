@@ -149,6 +149,9 @@ getData(index){
      
 
   },
+  /**
+   * 跳转登录界面
+   */
   tologin(){
     wx.navigateTo({
       url: '/pages/login/login',
@@ -265,7 +268,6 @@ if(wx.pageScrollTo){
    * 下拉触底请求数据
    */
  getMoreData(index) {
-   
     let that = this;
     wx.cloud.callFunction({
       name: 'getArticleData',
@@ -317,6 +319,19 @@ if(wx.pageScrollTo){
    * 用户点击右上角分享
    */
   onShareAppMessage: function () {
-
+    if(!this.data.loginStatus){
+      wx.showModal({
+        title:'提示',
+        content:'您还未登录，请先登录',
+        success(res){
+          if(res.confirm){
+            wx.navigateTo({
+              url: '/pages/login/login',
+            })
+          }
+        }
+      })
+        return
+      }
   }
 })

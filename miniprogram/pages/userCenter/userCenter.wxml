@@ -24,7 +24,7 @@
 
 
 <view class="lifeList">
-<view class="list">
+<view class="list" catchtap="toMyImages">
 <image src="../../images/相册.png" class="listImg"></image>
 <text class="listTitle">我的相册</text>
 </view>
@@ -36,14 +36,14 @@
 <image src="../../images/关注.png" class="listImg"></image>
 <text class="listTitle">我的关注</text>
 </view>
-<view class="list">
+<view class="list" catchtap="getPosition">
 <image src="../../images/足迹.png" class="listImg"></image>
-<text class="listTitle">我的足迹</text>
+<text class="listTitle">我的位置</text>
 </view>
 
 </view>
 <view class="lifeList">
-<view class="list">
+<view class="list" catchtap="toNowMessage">
 <image src="../../images/社区动态.png" class="listImg"></image>
 <text class="listTitle">社区动态</text>
 </view>
@@ -51,7 +51,9 @@
 <image src="../../images/客服.png" class="listImg"></image>
 <text class="listTitle">我的客服</text>
 </view>
-<view class="list" bindtap="toWallet">
+
+<view class="list" catchtap="toMyWallet">
+
 <image src="../../images/钱包.png" class="listImg"></image>
 <text class="listTitle">我的钱包</text>
 </view>

@@ -1,62 +1,47 @@
-// miniprogram/pages/userSet/userSet.js
+// miniprogram/pages/myPosition/myPosition.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    latitude:'',
+    longitude:'',
+    speed:'',
+    accuracy:''
   },
-  /**
-   * 退出登录
-   */
-  loginOut(){
-    console.log('111')
-    wx.clearStorage()
 
-    setTimeout(() => {
-  wx.navigateTo({
-      url: '/pages/index/index',
-    })
-    }, 500)
-  
-
-    wx.reLaunch({
-      url: '/pages/index/index',
-    })
-    // wx.navigateTo({
-    //   url: '/pages/index/index',
-    // })
-    // wx.navigateTo({
-    //   url: '/pages/index/index',
-    // })
-
-  },
-  /**
-   * 修改登录密码
-   */
-  changePwd(){
-
-    console.log(0)
-
-    console.log('change')
-    wx.navigateTo({
-      url: '/pages/changePwd/changePwd',
-    })
-
-  },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
 
   },
+ 
 
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-
+    let that = this
+    wx.getLocation({
+      type: 'wgs84',
+      success(res) {
+        const latitude = res.latitude
+        const longitude = res.longitude
+        const speed = res.speed
+        const accuracy = res.accuracy
+        that.setData({
+          latitude,
+          longitude,
+          speed,
+          accuracy
+        })
+      }
+    })
+   console.log(that.data.latitude, that.data.speed)
+   
+  
   },
 
   /**
